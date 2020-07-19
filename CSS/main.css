@@ -1,0 +1,1175 @@
+/* Extra large devices (large desktops)
+No media query since the extra-large breakpoint has no upper bound on its width */
+
+/* --------- Start Global --------- */
+:root {
+    --main_color: #fff;
+        --main_color_1 : rgba(255,255,255,.85);
+            --main_color_2 : rgb(255, 255, 255);
+                --main_color_3 : rgba(255,255,255,.5);
+                    --main_color_4 : #e1e1e1;
+                        --main_color_5 : #bebebe;
+    --second_color: #000;
+        --second_color_1 : rgba(0, 0, 0, 0.6);
+            --second_color_2 : #7f7f7f;
+                --second_color_3 : #1c1c1c;
+                    --second_color_4 : #666;
+                        --second_color_5 : #090909;
+    --third_color : #d0021b;
+}
+html {
+    overflow: hidden; 
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+.container {
+    padding: 0 15px 0 85px;
+}
+/* --------- End Global --------- */
+/* ===== Start Navbar ===== */
+nav {
+    z-index: 500;
+    display: none !important;
+}
+nav .nav_control .navbar-toggler {
+    border-color: var(--main_color);
+    margin-left: 5px;
+}
+.navbar-nav {
+    padding: 100px 0;
+}
+.navbar-nav .nav-link {
+    font-size: 40px;
+}
+.navbar-nav .nav-item {
+    position: relative;
+    z-index: 5;
+}
+.navbar-nav .nav-item .fa-angle-down {
+    width: 50px;
+    margin-top: 15px;
+    font-size: 40px;
+}
+.navbar-nav .nav-link,
+.navbar-nav .nav-item .fa-angle-down {
+    z-index: 5;
+    cursor: pointer;
+}
+
+.navbar-nav .nav-item:hover::after, 
+.navbar-nav .nav-item::after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    top: 60%;   right: 20%;
+}
+.navbar-nav .nav-item:hover::after {
+    width: 70%;
+    left: 30%;
+}
+.navbar-nav .nav-item::after {
+    width: 0%;   
+    left: 0%;   
+} 
+.navbar-toggler,
+.navbar-toggler:active {
+    outline: none;
+}
+/* ===== End Navbar ===== */
+/* ===== Start Navbar virtical ===== */
+.nav_vertical {
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 70px;    height: 100%;
+    z-index: 99999 !important;
+}
+/* ---- Start The icon bars */
+.vertical_nav_bars {
+    position: relative;
+    width: 40px;    height: 40px;
+    cursor: pointer;
+}
+.vertical_nav_bars.close .top {
+    transform: rotate(45deg);
+    top: 48%;
+}
+.vertical_nav_bars.close .midle {
+    width: 0;
+    right: 0;
+}
+.vertical_nav_bars.close .bottom {
+    transform: rotate(-45deg);
+    top: 48%;
+}
+.vertical_nav_bars .line {
+    position: absolute;
+    width: 100%;    height: 2px;
+}
+.vertical_nav_bars .top {
+    top: 18%;
+}
+.vertical_nav_bars .midle {
+    top: 48%;
+}
+.vertical_nav_bars .bottom {
+    top: 78%;
+}
+/* ---- End The icon bars */
+.contact_icons .fa-twitter ,
+.contact_icons a {
+    font-size: 18px;
+}
+.nav_vertical_menu {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    top: 0;     left: 70px;
+    padding-left: 0px;        /* 120px */
+    width: 0px;  /* 600px */    height: 100%;
+    backdrop-filter: blur(20px);
+}
+.vertical_menu_displayFlex {
+    display: flex;
+    width: 600px;               /* 600px */
+    padding-left: 120px;        /* 120px */
+}
+.nav_vertical_menu .nav-vertical-item {
+    position: relative;
+    display: none;
+    z-index: 5;
+    left: 0px;
+}
+.nav_vertical_menu .nav-vertical_activeItem {
+    display: flex;
+}
+.nav_vertical_menu .nav-vertical-link {
+    font-size: 35px;
+    text-decoration: none;
+}
+.nav_vertical_menu .nav-vertical-item .fa-angle-down {
+    width: 50px;
+    margin-top: 15px;
+    font-size: 35px;
+}
+.nav_vertical_menu .nav-vertical-link,
+.nav_vertical_menu .nav-vertical-item .fa-angle-down {
+    cursor: pointer;
+    z-index: 9999;
+}
+.nav_vertical_menu .nav-vertical-item:hover::after {
+    position: absolute;
+    content: '';
+    width: 130%;    height: 2px;
+    top: 60%;   left: 0%;   right: 20%;
+}
+.nav_vertical_menu .nav-vertical-item::after {
+    position: absolute;
+    content: '';
+    width: 0%;  height: 4px;
+    top: 60%;   right: 20%;   left: -30%;   
+    z-index: -100;
+} 
+/* ===== End Navbar virtical ===== */
+/* ===== Start Main ===== */
+main {
+    position: relative;
+    height: 740px;
+    background-image: url("../images/header-cafe.jpg");
+}
+main .main_overlay {
+    position: absolute;
+    content: '';
+    width: 100%;   height: 100%;
+    top: 0;  left: 0;
+    z-index: 2;
+}
+main .main_content {
+    position: absolute;
+    z-index: 5;
+}
+main .main_content h1 {
+    font-size: 55px;
+    padding: 0 200px;
+    line-height: 65px;
+    font-weight: 700;
+    margin-top: 100px;
+}
+main .main_content h1 span {
+    font-size: 80px;
+}
+main .main_content p {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 40px 0;
+}
+main .main_icons {
+    height: 200px;
+}
+main .main_icons .fa-angle-double-down {
+    font-size: 25px;
+    cursor: pointer;
+}
+/* ===== End Main ===== */
+/* ===== Start Meal ===== */
+.meal {
+    padding: 80px 0 80px;
+    border-bottom: 1px solid var(--main_color_4);
+}
+.meal p:first-child ,
+.meal p:last-child {
+    padding: 20px 100px 60px;
+    font-size: 30px;
+}
+.meal p:first-child span ,
+.meal p:last-child span {
+    text-decoration: underline;
+    font-weight: bold;
+}
+.meal .meal_first {
+    position: relative;
+}
+.meal .meal_first img {
+    margin-bottom: 40px;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+.meal .meal_second img {
+    margin-bottom: 40px;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+.meal .second_para {
+    padding: 20px 120px 40px;
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.modal .modal-header {
+    padding: 0px 20px;
+}
+.modal .modal-header .close {
+    padding: 14px;
+    outline: none;
+}
+.modal .modal-content,
+.modal .modal-header {
+    border: none;
+}
+.modal,
+.modal .modal-body {
+    padding: 0 !important;
+}
+.modal .modal-body img {
+    margin: 0;
+    border-radius: 0; 
+    height: 100%;
+}
+/* ===== End Meal ===== */
+/* ===== Start Our Food ===== */
+.our_food {
+    position: relative;
+    padding: 60px 0;
+    margin-top: 4px;
+    border-top: 1px solid var(--main_color_4);
+}
+.our_food .our_food_img {
+    position: absolute;
+    width: 400px;   height: 900px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-image: url("../images/cafe-08.jpg");
+    z-index: 5;
+    top: -100px;    left: 0;
+}
+.our_food .first_our_food h2 {
+    font-size: 37px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+.our_food .first_our_food p {
+    padding: 0 60px;
+    font-size: 18px;
+}
+.our_food .second_our_food {
+    margin-top: 80px;
+}
+.our_food .second_our_food h3 {
+    padding: 5px;
+    margin-bottom: 40px;
+    border: 1px solid var(--main_color_4);
+}
+.our_food .second_our_food span {
+    font-size: 20px;
+    font-weight: 600;
+}
+.our_food .second_our_food p {
+    font-size: 15px;
+    font-weight: 600;
+}
+/* ===== End Our Food ===== */
+/* ===== Start dessert ===== */
+.dessert .dessert_left {
+    margin-left: 50px;
+}
+.dessert .dessert_left p {
+    font-size: 50px;
+    padding: 0 170px;
+    line-height: 70px;
+}
+.dessert .dessert_left p span {
+    font-size: 70px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+.dessert .dessert_right {
+    height: 700px;  width: 1000px;
+}
+.dessert .dessert_right video {
+    width: 100%;    height: 100%;
+}  
+/* ===== End dessert ===== */
+/* ===== Start Our drinks ===== */
+.our_drinks {
+    position: relative;
+    padding: 60px 0 100px;
+    margin-top: 4px;
+}
+.our_drinks .our_drinks_img {
+    position: absolute;
+    width: 400px;    height: 700px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-image: url("../images/cafe-10.jpg");
+    z-index: 5;
+    top: 0px;   left: 0;
+}
+.our_drinks .second_our_drinks {
+    margin-top: 40px;
+}
+.our_drinks .second_our_drinks h3 {
+    padding: 5px;
+    margin-bottom: 40px;
+    border: 1px solid var(--main_color_4);
+}
+.our_drinks .second_our_drinks span {
+    font-size: 20px;
+    font-weight: 600;
+}
+.our_drinks .second_our_drinks p {
+    font-size: 15px;
+    font-weight: 600;
+}
+/* ===== End Our drinks ===== */
+/* ===== Start Black_section ===== */
+.black_section {
+    height: 800px;
+    background-image: url("../images/cafe-11.jpg");
+}
+/* ===== End Black_section ===== */
+/* ===== Start contact ===== */
+.contact {
+    padding: 100px 0 100px;
+}
+.contact .contact_header {
+    padding: 0px 0 50px;
+}
+.contact .contact_header h2 {
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+.contact .contact_header p {
+    padding: 0 200px;
+    font-size: 20px;
+}
+.contact form textarea {
+    height: 300px;
+}
+.contact form button {
+    padding: 10px 0;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+.contact .map_section {
+    height: 80%;
+}
+.contact .map_section iframe {
+    width: 100%;    height: 100%;
+}
+.contact form input ,
+.contact form textarea {
+    margin-bottom: 20px;
+    padding: 25px;
+}
+.contact .contact_data {
+    padding: 20px 0 0;
+}
+.contact .emails_contact li ,
+.contact .emails_contact li a {
+    font-size: 18px;
+}
+.contact .emails_contact span {
+    font-weight: 700;
+}
+.contact .social_icons {
+    width: 27%;
+}
+.contact .social_icons li {
+    width: 45px;    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid var(--main_color_5);
+}
+/* ===== End contact ===== */
+/* ===== Start load spinner ===== */
+.page_over_lay {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;    height: 100%;
+    top: 0;    left: 0;
+    z-index: 99999;
+}
+.sk-folding-cube {
+    position: relative;
+    margin: 20px auto;
+    width: 40px;    height: 40px;
+    -webkit-transform: rotateZ(45deg);
+        -moz-transform: rotateZ(45deg);
+            -o-transform: rotateZ(45deg);
+                -ms-transform: rotateZ(45deg);
+                    transform: rotateZ(45deg);
+}
+.sk-folding-cube .sk-cube {
+    position: relative;
+    float: left;
+    width: 50%;    height: 50%;
+    -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+            -o-transform: scale(1.1);
+                -ms-transform: scale(1.1);
+                    transform: scale(1.1); 
+}
+.sk-folding-cube .sk-cube:before {
+    position: absolute;
+    content: '';
+    top: 0;    left: 0;
+    width: 100%;    height: 100%;
+    -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+        -moz-animation: sk-foldCubeAngle 2.4s infinite linear both;
+            -o-animation: sk-foldCubeAngle 2.4s infinite linear both;
+                -ms-animation: sk-foldCubeAngle 2.4s infinite linear both;
+                    animation: sk-foldCubeAngle 2.4s infinite linear both;
+    -webkit-transform-origin: 100% 100%;
+        -moz-transform-origin: 100% 100%;
+            -o-transform-origin: 100% 100%;
+                -ms-transform-origin: 100% 100%;
+                    transform-origin: 100% 100%;
+}
+.sk-folding-cube .sk-cube2 {
+    -webkit-transform: scale(1.1) rotateZ(90deg);
+        -moz-transform: scale(1.1) rotateZ(90deg);
+            -o-transform: scale(1.1) rotateZ(90deg);
+                -ms-transform: scale(1.1) rotateZ(90deg);
+                    transform: scale(1.1) rotateZ(90deg);
+}
+.sk-folding-cube .sk-cube3 {
+    -webkit-transform: scale(1.1) rotateZ(180deg);
+        -moz-transform: scale(1.1) rotateZ(180deg);
+            -o-transform: scale(1.1) rotateZ(180deg);
+                -ms-transform: scale(1.1) rotateZ(180deg);
+                    transform: scale(1.1) rotateZ(180deg);
+}
+.sk-folding-cube .sk-cube4 {
+    -webkit-transform: scale(1.1) rotateZ(270deg);
+        -moz-transform: scale(1.1) rotateZ(270deg);
+            -o-transform: scale(1.1) rotateZ(270deg);
+                -ms-transform: scale(1.1) rotateZ(270deg);
+                    transform: scale(1.1) rotateZ(270deg);
+}
+  .sk-folding-cube .sk-cube2:before {
+    -webkit-animation-delay: 0.3s;
+        -moz-animation-delay: 0.3s;
+            -o-animation-delay: 0.3s;
+                -ms-animation-delay: 0.3s;
+                    animation-delay: 0.3s;
+}
+.sk-folding-cube .sk-cube3:before {
+    -webkit-animation-delay: 0.6s;
+        -moz-animation-delay: 0.6s;
+            -o-animation-delay: 0.6s;
+                -ms-animation-delay: 0.6s;
+                    animation-delay: 0.6s; 
+}
+.sk-folding-cube .sk-cube4:before {
+    -webkit-animation-delay: 0.9s;
+        -moz-animation-delay: 0.9s;
+            -o-animation-delay: 0.9s;
+                -ms-animation-delay: 0.9s;
+                    animation-delay: 0.9s;
+}
+@-webkit-keyframes sk-foldCubeAngle {
+    0%, 10% {
+        -webkit-transform: perspective(140px) rotateX(-180deg);
+            -moz-transform: perspective(140px) rotateX(-180deg);
+                -o-transform: perspective(140px) rotateX(-180deg);
+                    -ms-transform: perspective(140px) rotateX(-180deg);
+                        transform: perspective(140px) rotateX(-180deg);
+      opacity: 0; 
+    } 25%, 75% {
+        -webkit-transform: perspective(140px) rotateX(0deg);
+            -moz-transform: perspective(140px) rotateX(0deg);
+                -o-transform: perspective(140px) rotateX(0deg);
+                    -ms-transform: perspective(140px) rotateX(0deg);
+                        transform: perspective(140px) rotateX(0deg);
+      opacity: 1; 
+    } 90%, 100% {
+        -webkit-transform: perspective(140px) rotateY(180deg);
+            -moz-transform: perspective(140px) rotateX(180deg);
+                -o-transform: perspective(140px) rotateX(180deg);
+                    -ms-transform: perspective(140px) rotateX(180deg);
+                        transform: perspective(140px) rotateY(180deg);
+      opacity: 0; 
+    } 
+}
+@keyframes sk-foldCubeAngle {
+    0%, 10% {
+        -webkit-transform: perspective(140px) rotateX(-180deg);
+            -moz-transform: perspective(140px) rotateX(-180deg);
+                -o-transform: perspective(140px) rotateX(-180deg);
+                    -ms-transform: perspective(140px) rotateX(-180deg);
+                        transform: perspective(140px) rotateX(-180deg);
+      opacity: 0; 
+    } 25%, 75% {
+        -webkit-transform: perspective(140px) rotateX(0deg);
+            -moz-transform: perspective(140px) rotateX(0deg);
+                -o-transform: perspective(140px) rotateX(0deg);
+                    -ms-transform: perspective(140px) rotateX(0deg);
+                        transform: perspective(140px) rotateX(0deg);
+      opacity: 1; 
+    } 90%, 100% {
+        -webkit-transform: perspective(140px) rotateY(180deg);
+            -moz-transform: perspective(140px) rotateX(180deg);
+                -o-transform: perspective(140px) rotateX(180deg);
+                    -ms-transform: perspective(140px) rotateX(180deg);
+                        transform: perspective(140px) rotateY(180deg);
+      opacity: 0; 
+    }
+}
+/* ===== End load spinner ===== */
+/* ===== Start footer ===== */
+footer {
+    padding: 20px 0;
+}
+footer ul {
+    margin: 0;
+}
+footer ul li {
+    font-size: 15px;
+}
+footer ul li a {
+    font-size: 20px;
+}
+/* ===== End footer ===== */
+/* --------- Start common background-repeat --------- */
+main,
+.our_food .our_food_img,
+.our_drinks .our_drinks_img,
+.black_section {
+    background-repeat: no-repeat;
+}
+
+/* --------- Start common background-position --------- */
+.our_food .our_food_img,
+.our_drinks .our_drinks_img,
+.black_section {
+    background-position: center center;
+}
+
+/* --------- Start common background-attachment --------- */
+main {
+    background-attachment: fixed;
+}
+
+/* --------- Start common background-size --------- */
+main,
+.our_food .our_food_img,
+.our_drinks .our_drinks_img,
+.black_section {
+    -webkit-background-size:cover;
+        -moz-background-size:cover;
+            -o-background-size:cover;
+                -ms-background-size:cover;
+                    background-size:cover;
+}
+
+/* --------- Start common transition 0.3s --------- */
+.navbar-nav .nav-item::after,
+.nav_vertical_menu,
+.nav_vertical_menu .nav-vertical_activeItem,
+.nav_vertical_menu .nav-vertical-item::after,
+.contact .social_icons li,
+.vertical_nav_bars .line {
+    -webkit-transition: 0.3s ease-in-out;
+        -moz-transition: 0.3s ease-in-out;
+            -o-transition: 0.3s ease-in-out;
+                -ms-transition: 0.3s ease-in-out;
+                    transition: 0.3s ease-in-out;
+}
+
+/* --------- Start common background-color --------- */
+.vertical_nav_bars .line,
+.sk-folding-cube .sk-cube:before {
+    background-color: var(--main_color);
+}
+
+.navbar-nav .nav-item:hover::after,
+.navbar-nav .nav-item::after,
+.nav_vertical_menu .nav-vertical-item:hover::after,
+.nav_vertical_menu .nav-vertical-item::after {
+    background-color: var(--main_color_3);
+}
+
+nav,
+.navbar-nav .nav-link,
+.navbar-nav .nav-item .fa-angle-down,
+.nav_vertical,
+.nav_vertical_menu,
+.nav_vertical_menu .nav-vertical-link,
+.nav_vertical_menu .nav-vertical-item .fa-angle-down,
+.page_over_lay,
+footer {
+    background-color: var(--second_color);
+}
+
+main .main_overlay {
+    background-color: var(--second_color_1);
+}
+
+.contact form button {
+    background-color: var(--second_color_3);
+}
+
+.contact form button:hover,
+.contact .social_icons li:hover {
+    background-color: var(--second_color_5);
+}
+/* --------- Start common color --------- */
+nav .nav_control .navbar-toggler,
+nav .nav_contact a,
+.navbar-nav .active,
+.contact_icons .fa-twitter ,
+.contact_icons a,
+main,
+main .main_icons .fa-angle-double-down:hover,
+.contact form button,
+.contact .social_icons li:hover,
+footer ul li a:hover {
+    color: var(--main_color);
+}
+
+.navbar-nav .nav-link,
+.navbar-nav .nav-item .fa-angle-down,
+.nav_vertical_menu .nav-vertical-link,
+.nav_vertical_menu .nav-vertical-item .fa-angle-down {
+    color: var(--main_color_1);
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:hover .nav-item .fa-angle-down,
+.nav_vertical_menu .nav-vertical-link:hover,
+.nav_vertical_menu .nav-vertical-link:hover .nav-vertical-item .fa-angle-down,
+main .main_icons .fa-angle-double-down {
+    color: var(--main_color_2); 
+}
+
+.our_food .second_our_food span,
+.our_drinks .second_our_drinks span,
+.contact .emails_contact span {
+    color: var(--second_color);
+}
+
+footer ul li ,
+footer ul li a {
+    color: var(--second_color_2);
+}
+
+.meal p:first-child ,
+.meal p:last-child {
+    color: var(--second_color_3);
+}
+
+.meal .second_para,
+.our_food .first_our_food p,
+.contact .contact_header p,
+.contact .emails_contact li ,
+.contact .emails_contact li a {
+    color: var(--second_color_4);
+}
+
+.our_food .first_our_food .fa-star,
+.our_drinks .first_our_drinks .fa-star,
+footer ul li span {
+    color: var(--third_color);
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { 
+    /* ===== Start Main ===== */
+    main .main_content h1 {
+        padding: 0 150px;
+        margin-top: 180px;
+        font-size: 45px;
+    }
+    main .main_content h1 span {
+        font-size: 60px;
+    }
+    main .main_content p {
+        margin: 0;
+    }
+    /* ===== End Main ===== */
+    /* ===== Start Our Food ===== */
+    .our_food .our_food_img {
+        width: 350px;    height: 900px;
+    }
+    .our_food .first_our_food p {
+        padding: 0px;
+    }
+    /* ===== End Our Food ===== */
+    /* ===== Start dessert ===== */
+    .dessert .dessert_left {
+        margin-left: 50px;
+    }
+    .dessert .dessert_left p {
+        padding: 0 80px;
+        font-size: 45px;
+        line-height: 60px;
+    }
+    .dessert .dessert_left p span {
+        font-size: 60px;
+    }
+    .dessert .dessert_right {
+        height: 650px;
+    }
+    .dessert .dessert_right video {
+        width: 100%;    height: 100%;
+    }
+    /* ===== End dessert ===== */
+    /* ===== Start Our drinks ===== */
+    .our_drinks {
+        padding: 60px 0 100px;
+        margin-top: 0px;
+    }
+    .our_drinks .our_drinks_img {
+        width: 350px;   height: 800px;
+    }
+    .our_drinks .second_our_drinks p {
+        font-size: 14px;
+    }
+    /* ===== End Our drinks ===== */
+    /* ===== Start contact ===== */
+    .contact form input ,
+    .contact form textarea {
+        margin-bottom: 20px;
+        padding: 25px;
+    }
+    .contact .social_icons {
+        width: 17%;
+    }
+    /* ===== End contact ===== */
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+    /* ===== Start Main ===== */
+    main .main_content h1 {
+        padding: 0 50px; 
+        margin-top: 180px;
+        font-size: 45px;
+        line-height: 60px;
+    }
+    main .main_content h1 span {
+        font-size: 65px;
+    }
+    /* ===== End Main ===== */
+    /* ===== Start Meal ===== */
+    .meal {
+        padding: 70px 0 70px;
+    }
+    .meal p:first-child ,
+    .meal p:last-child {
+        padding: 20px 0px 40px;
+        font-size: 24px;
+    }
+    .meal .second_para {
+        padding: 20px 0px 40px;
+        font-size: 22px;
+    }
+    /* ===== End Meal ===== */
+    /* ===== Start Our Food ===== */
+    .our_food .our_food_img {
+        width: 600px;    height: 500px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    .our_food .our_food_img {
+        margin-top: 20px;
+    }
+    .our_food .first_our_food {
+        margin-top: 400px;
+    }
+    /* ===== End Our Food ===== */
+    /* ===== Start dessert ===== */
+    .dessert {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .dessert .dessert_left {
+        margin-left: 9%;
+    }
+    .dessert .dessert_left p {
+        font-size: 40px;
+        margin-bottom: 50px;
+    }
+    .dessert .dessert_left p span {
+        font-size: 50px;
+    }
+    .dessert .dessert_right {
+        width: 600px;    height: 300px;  
+        margin-left: 9%;
+    }
+    /* ===== End dessert ===== */
+    /* ===== Start Our drinks ===== */
+    .our_drinks {
+        padding: 60px 0 80px;
+    }
+    .our_drinks .our_drinks_img {
+        width: 600px;    height: 350px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    .our_drinks .our_drinks_img {
+        margin-top: 80px;
+    }
+    .our_drinks .first_our_drinks {
+        margin-top: 400px;
+    }
+    /* ===== End Our drinks ===== */
+    /* ===== Start Black_section ===== */
+    .black_section {
+        height: 600px;
+    }
+    /* ===== End Black_section ===== */
+    /* ===== Start contact ===== */
+    .contact {
+        padding: 80px 0 120px;
+    }
+    .contact .contact_header p {
+        padding: 0px;
+    }
+    .contact form textarea {
+        height: 150px;
+    }
+    .contact .map_section {
+        margin-top: 30px;
+    }
+    /* ===== End contact ===== */
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+    /* ===== Start Global ===== */
+    .container {
+        padding-left: 15px;
+    }
+    /* ===== End Global ===== */
+    /* ===== Start Navbar ===== */
+    nav {
+        display: flex !important;
+    }
+    .nav_scroll {
+        position: fixed;
+        padding: 0;
+        width: 100%;
+        top: -100px;   left: 0;
+        -webkit-transition: 0.3s ease-in-out;
+            -moz-transition: 0.3s ease-in-out;
+                -o-transition: 0.3s ease-in-out;
+                    -ms-transition: 0.3s ease-in-out;
+                        transition: 0.3s ease-in-out;
+        -webkit-transform: translateY(100px);
+            -moz-transform: translateY(100px);
+                -o-transform: translateY(100px);
+                    -ms-transform: translateY(100px);
+                        transform: translateY(100px);
+    }
+    .navbar-nav {
+        padding: 50px;
+    }
+    .navbar-nav .nav-link {
+        font-size: 20px;
+    }
+    .navbar-nav .nav-item .fa-angle-down {
+        margin-top: 10px;
+        width: 30px;
+        font-size: 20px;
+    }
+    /* ===== End Navbar ===== */
+    /* ===== Start Navbar virtical ===== */
+    .nav_vertical {
+        display: none !important;
+    }
+    /* ===== End Navbar virtical ===== */
+    /* ===== Start Main ===== */
+    main {
+        margin-top: -59px;
+    }
+    main .main_content h1 {
+        padding: 0px;
+        margin-top: 180px;
+        line-height: 60px;
+        font-size: 40px;
+    }
+    main .main_content h1 span {
+        font-size: 60px;
+    }
+    /* ===== End Main ===== */
+    /* ===== Start Meal ===== */
+    .meal {
+        padding: 40px 0 80px;   
+    }
+    /* ===== End Meal ===== */
+    /* ===== Start Our Food ===== */
+    .our_food .our_food_img {
+        width: 130px;    height: 1450px;
+    }
+    .our_food .first_our_food {
+        margin-top: 0px;
+    }
+    .our_food .second_our_food .first_h3 {
+        margin-top: -40px;
+    }
+    .our_food .second_our_food .second_h3 {
+        margin-top: 40px;
+    }
+    /* ===== End Our Food ===== */
+    /* ===== Start dessert ===== */
+    .dessert .dessert_left {
+        margin-left: 0%;
+    }
+    .dessert .dessert_left p {
+        padding: 0;
+        margin: 120px 0 40px;
+        font-size: 30px;
+    }
+    .dessert .dessert_left p span {
+        font-size: 35px;
+    }
+    .dessert .dessert_right {
+        margin-left: 0%;
+        width: 550px;
+    }
+    /* ===== End dessert ===== */
+    /* ===== Start Our drinks ===== */
+    .our_drinks .our_drinks_img {
+        width: 130px;    height: 1100px;
+    }
+    .our_drinks .first_our_drinks {
+        margin-top: 60px;
+    }
+    .our_drinks .second_our_drinks .first_h3 {
+        margin-top: -40px;
+    }
+    .our_drinks .second_our_drinks .second_h3 {
+        margin-top: 40px;
+    }
+    /* ===== End Our drinks ===== */
+    /* ===== Start Black_section ===== */
+    .black_section {
+        margin-top: 40px;
+        height: 400px;
+    }
+    /* ===== End Black_section ===== */
+    /* ===== Start contact ===== */
+    .contact {
+        padding: 60px 0 120px;
+    }
+    .contact .contact_header {
+        padding-bottom: 30px;
+    }
+    .contact .social_icons {
+        width: 30%;
+    }
+    /* ===== End contact ===== */
+    /* ===== Start footer ===== */
+    footer {
+        padding: 20px 0;
+    }
+    footer ul {
+        margin: 0;
+    }
+    footer ul li ,
+    footer ul li a {
+        font-size: 15px;
+    }
+    footer ul li a {
+        font-size: 20px;
+    }
+    footer .footer_info {
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    /* ===== End footer ===== */
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    /* ===== Start Navbar ===== */
+    .navbar-nav {
+        padding: 50px 0;
+    }
+    .navbar-nav .nav-link {
+        font-size: 20px;
+    }
+    .navbar-nav .nav-item .fa-angle-down {
+        margin-top: 10px;
+        font-size: 20px;
+        width: 30px;
+    }
+    /* ===== End Navbar ===== */
+    /* ===== Start Main ===== */
+    main {
+        height: 720px;
+    }
+    main .main_content h1 {
+        margin-top: 180px;
+        line-height: 40px;
+        font-size: 30px;
+    }
+    main .main_content h1 span {
+        font-size: 45px;
+    }
+    /* ===== End Main ===== */
+    /* ===== Start Meal ===== */
+    .meal {
+        padding: 30px 0 80px;   
+    }
+    .meal p:first-child ,
+    .meal p:last-child ,
+    .meal .second_para {
+        padding-bottom: 20px;
+        font-size: 20px;
+    }
+    .meal .meal_first img ,
+    .meal .meal_second img {
+        margin-bottom: 20px;
+        border-radius: 10px;
+    }
+    .modal .modal-body img {
+        margin: 0;
+        border-radius: 0; 
+        height: 100%;
+    }
+    /* ===== Start Our Food ===== */
+    .our_food {
+        padding: 60px 0 0;
+    }
+    .our_food .our_food_img {
+        width: 90%;   height: 200px;
+    }
+    .our_food .first_our_food {
+        margin-top: 80px;
+    }
+    /* ===== End Our Food ===== */
+    /* ===== Start dessert ===== */
+    .dessert .dessert_left p {
+        padding: 0 10px;
+        margin: 40px 0 40px;
+        font-size: 25px;
+        line-height: 25px;
+    }
+    .dessert .dessert_left p span {
+        font-size: 30px;
+    }
+    .dessert .dessert_right {
+        width: 300px;   height: 200px;
+    }
+    /* ===== End dessert ===== */
+    /* ===== Start Our drinks ===== */
+    .our_drinks {
+        padding: 60px 0 0;
+    }
+    .our_drinks .our_drinks_img {
+        width: 90%;  height: 200px;
+    }
+    .our_drinks .first_our_drinks {
+        margin-top: 260px;
+    }
+    /* ===== End Our drinks ===== */
+    /* ===== Start Black_section ===== */
+    .black_section {
+        height: 300px;
+    }
+    /* ===== End Black_section ===== */
+    /* ===== Start contact ===== */
+    .contact {
+        padding: 100px 0 180px;
+    }
+    .contact .contact_header h2 {
+        font-size: 25px;
+    }
+    .contact form textarea {
+        height: 300px;
+    }
+    .contact form input ,
+    .contact form textarea {
+        margin-bottom: 10px;
+    }
+    .contact .contact_data {
+        padding: 20px 0 0;
+    }
+    .contact .contact_data .contact_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .contact .emails_contact li ,
+    .contact .emails_contact li a{
+        font-size: 17px;
+    }
+    .contact .social_icons {
+        width: 55%;
+    }
+    /* ===== End contact ===== */
+    /* ===== Start footer ===== */
+    footer {
+        padding: 20px 0;
+    }
+    footer ul {
+        margin: 0;
+    }
+    footer ul li ,
+    footer ul li a {
+        font-size: 14px;
+    }  
+    footer .footer_info {
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    /* ===== End footer ===== */
+}
+
+
+
+
+
+
