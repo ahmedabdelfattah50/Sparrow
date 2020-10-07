@@ -16,8 +16,8 @@ No media query since the extra-large breakpoint has no upper bound on its width 
                     --second_color_4 : #666;
                         --second_color_5 : #090909;
     --third_color : #d0021b;
-/* }
-html {
+}
+/*html {
     overflow: hidden; 
 } */
 body {
