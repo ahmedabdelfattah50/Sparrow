@@ -3,11 +3,11 @@ $(window).on('load', function(){
     $('.page_over_lay .sk-folding-cube').fadeOut(1200, function(){
         $(this).parent().fadeOut(1500,function(){
             // decalre nice scroll 
-            $("body").niceScroll({
-                cursorwidth: "7px",
-                cursorborder: "1px solid #ddd",
-                scrollspeed: 70,
-            });
+//             $("body").niceScroll({
+//                 cursorwidth: "7px",
+//                 cursorborder: "1px solid #ddd",
+//                 scrollspeed: 70,
+//             });
             $('body').css({'overflow':'auto' , 'overflow-X':'hidden !important'});
             $(this).remove();
         });
