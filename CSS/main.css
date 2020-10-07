@@ -16,13 +16,13 @@ No media query since the extra-large breakpoint has no upper bound on its width 
                     --second_color_4 : #666;
                         --second_color_5 : #090909;
     --third_color : #d0021b;
-}
+/* }
 html {
     overflow: hidden; 
-}
+} */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow: hidden;
+/*     overflow: hidden; */
 }
 .container {
     padding: 0 15px 0 85px;
